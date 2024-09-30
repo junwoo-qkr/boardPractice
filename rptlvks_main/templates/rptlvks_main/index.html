@@ -1,0 +1,21 @@
+<h1>mainpage</h1>
+<table>
+    <tr>
+        <td>Title</td>
+        <td>name</td>
+        <td>views</td>
+    </tr>
+    {% if texts %}
+        {% for i in texts %}
+        <tr>
+            <td>{{ i.title }}</td>
+            <td>{{ i.publisher }}</td>
+            <td>{{ i.view_num }}</td>
+        </tr>
+        {% endfor %}
+    {% else %}
+        <tr>
+            <td>nothing</td>
+        </tr>
+    {% endif %}
+</table>
