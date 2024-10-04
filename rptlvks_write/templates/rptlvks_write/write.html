@@ -1,0 +1,6 @@
+<h1>page for write</h1>
+<a href="{% url 'rptlvks_main:index' %}"><button>main page</button></a>
+<form method="POST" action="{% url 'rptlvks_write:writeProcess' %}" enctype="multipart/form-data">
+    {{ form.as_p }}
+    <button type="submit">글쓰기</button>
+</form>

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'rptlvks_main',
+    'rptlvks_write',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

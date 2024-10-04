@@ -1,21 +1,22 @@
 <h1>mainpage</h1>
-<table>
+<a href="{% url 'rptlvks_write:write' %}"><button>글쓰기</button></a>
+<table border=1>
     <tr>
         <td>Title</td>
         <td>name</td>
         <td>views</td>
     </tr>
     {% if texts %}
-        {% for i in texts %}
+        {% for content in texts %}
         <tr>
-            <td>{{ i.title }}</td>
-            <td>{{ i.publisher }}</td>
-            <td>{{ i.view_num }}</td>
+            <td>{{ content.title }}</td>
+            <td>room for publisher</td>
+            <td>{{ content.view_num }}</td>
         </tr>
         {% endfor %}
     {% else %}
         <tr>
-            <td>nothing</td>
+            <td colspan=3>nothing</td>
         </tr>
     {% endif %}
 </table>
